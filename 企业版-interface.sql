@@ -62,15 +62,6 @@ INSERT `ici_interface`(`id`, `name`, `method`, `url`, `auth_code`, `limit_gap`, 
 (replace(uuid(), '-', ''), '确认对账单', 'PUT', '/account/users/v1.0/accounts/checks/status', 'confirmCheck', 1, NULL, NULL, NULL, 1, 1, now()),
 (replace(uuid(), '-', ''), '删除对账单', 'DELETE', '/account/users/v1.0/accounts/checks', 'deleteCheck', 1, NULL, NULL, NULL, 1, 1, now()),
 
--- 业务结算
-(replace(uuid(), '-', ''), '结算账户查询', 'GET', '/account/users/v1.0/settlements/accounts', NULL, 0, NULL, NULL, NULL, 1, 0, now()),
--- (replace(uuid(), '-', ''), '收款', 'POST', '/account/users/v1.0/settlements/receipt', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
--- (replace(uuid(), '-', ''), '退款', 'POST', '/account/users/v1.0/settlements/refund', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
--- (replace(uuid(), '-', ''), '酬金结算', 'POST', '/account/users/v1.0/settlements/salary', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
--- (replace(uuid(), '-', ''), '扣罚', 'POST', '/account/users/v1.0/settlements/penalty', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
--- (replace(uuid(), '-', ''), '赔付', 'POST', '/account/users/v1.0/settlements/reparation', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
--- (replace(uuid(), '-', ''), '冻结', 'POST', '/account/users/v1.0/settlements/freeze', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
-
 -- 提现
 (replace(uuid(), '-', ''), '获取提现申请列表', 'GET', '/account/manage/v1.0/withdraws', 'getWithdraw', 1, NULL, NULL, NULL, 1, 1, now()),
 (replace(uuid(), '-', ''), '获取提现申请详情', 'GET', '/account/manage/v1.0/withdraws/{id}', 'getWithdraw', 1, NULL, NULL, NULL, 1, 1, now()),
@@ -96,3 +87,12 @@ INSERT `ici_interface`(`id`, `name`, `method`, `url`, `auth_code`, `limit_gap`, 
 (replace(uuid(), '-', ''), '发票详情', 'GET', '/account/client/v1.0/invoices/{id}', NULL, 1, NULL, NULL, NULL, 1, 1, now()),
 (replace(uuid(), '-', ''), '申请开票', 'POST', '/account/client/v1.0/invoices', NULL, 1, NULL, NULL, NULL, 1, 1, now()),
 (replace(uuid(), '-', ''), '撤回开票', 'DELETE', '/account/client/v1.0/invoices', NULL, 1, NULL, NULL, NULL, 1, 1, now());
+
+-- 业务结算
+(replace(uuid(), '-', ''), '结算账户查询', 'GET', '/account/users/v1.0/settlements/accounts', NULL, 0, NULL, NULL, NULL, 1, 0, now()),
+-- (replace(uuid(), '-', ''), '收款', 'POST', '/account/users/v1.0/settlements/receipt', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
+-- (replace(uuid(), '-', ''), '退款', 'POST', '/account/users/v1.0/settlements/refund', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
+-- (replace(uuid(), '-', ''), '酬金结算', 'POST', '/account/users/v1.0/settlements/salary', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
+-- (replace(uuid(), '-', ''), '扣罚', 'POST', '/account/users/v1.0/settlements/penalty', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
+-- (replace(uuid(), '-', ''), '赔付', 'POST', '/account/users/v1.0/settlements/reparation', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
+-- (replace(uuid(), '-', ''), '冻结', 'POST', '/account/users/v1.0/settlements/freeze', NULL, 0, NULL, NULL, NULL, 0, 0, now()),
